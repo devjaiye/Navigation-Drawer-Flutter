@@ -56,7 +56,7 @@ class _HomePage extends State<HomePage>{
           ),
            ListTile(
             title: Text("Home Page"),
-             trailing: Icon(Icons.ac_unit),
+             trailing: Icon(Icons.menu),
              onTap: () {
               Navigator.of(context).pop();
                Navigator.of(context).push(new MaterialPageRoute(builder:
@@ -67,7 +67,7 @@ class _HomePage extends State<HomePage>{
 
           ListTile(
             title: Text("About Page"),
-            trailing: Icon(Icons.ac_unit),
+            trailing: Icon(Icons.info),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(new MaterialPageRoute(builder:
@@ -78,7 +78,7 @@ class _HomePage extends State<HomePage>{
 
           ListTile(
             title: Text("Settings Page"),
-            trailing: Icon(Icons.ac_unit),
+            trailing: Icon(Icons.security),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(new MaterialPageRoute(builder:

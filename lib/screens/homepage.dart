@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import './otherpage.dart';
+
+
 class HomePage extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
@@ -10,48 +12,51 @@ class HomePage extends StatefulWidget{
 
 class _HomePage extends State<HomePage>{
 
-  String mainProfilePic = "url";
-  String otherProfilePic = "url";
+  String mainProfilePic = "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+  String otherProfilePic = "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/368-mj-2516-02.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=9f3d0ad657bbca1c0f2db36ad7deb323";
 
-  void switchUser(){
+  //.. Switching Profile using multiple Accounts
+
+  /*void switchUser(){
     String backupString = mainProfilePic;
     this.setState(() {
       mainProfilePic = otherProfilePic;
       otherProfilePic = backupString;
     });
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("App Bar"),),
+      appBar: AppBar(title: Text("Navigation Drawer"),),
       drawer: new Drawer(
         child:  ListView(
         children: <Widget>[
           UserAccountsDrawerHeader(
-            accountName: Text("Lorem Ipsum"),
-            accountEmail: Text("ipsum@gmail.com"),
+            accountName: Text("John Doe"),
+            accountEmail: Text("johndoe@email.com"),
             currentAccountPicture: GestureDetector(
                child: CircleAvatar(
-                 //backgroundImage: NetworkImage(mainProfilePic),
+                 backgroundImage: NetworkImage(mainProfilePic),
                ),
-              onTap: () => print("Clicked")
+              onTap: () => print("Current User")
             ),
 
-            otherAccountsPictures: <Widget>[
+           //.. This line of code provides the usage of multiple accounts
+           /* otherAccountsPictures: <Widget>[
               GestureDetector(
-                child: CircleAvatar(
-                  backgroundColor: Colors.red,
-                ),
                 onTap: ()=> switchUser(),
+                child: CircleAvatar(
+                  backgroundImage: NetworkImage(otherProfilePic)
+                ),
               ),
-            ],
+            ], */
+
             decoration: BoxDecoration(
-//              image: DecorationImage(
-            //fit: BoxFit.fill,
-//                  image: NetworkImage("url")
-//              )
-            color: Colors.teal,
+              image: DecorationImage(
+            fit: BoxFit.fill,
+                  image: NetworkImage("https://png.pngtree.com/thumb_back/fh260/background/20190828/pngtree-dark-vector-abstract-background-image_302715.jpg")
+             ),
             ),
           ),
            ListTile(

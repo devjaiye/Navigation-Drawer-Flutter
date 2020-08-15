@@ -1,8 +1,8 @@
-# flutter_side_menu_drawer
+# Navigation Drawer 
 
-A new Flutter application.
+Navigation drawer makes it easy to navigate to and fro between those links. It's not visible by default and it needs to opened either by sliding from left or clicking its icon in the ActionBar.
 
-## Getting Started
+## Widgets Used:
 
 
 ### Demo 
